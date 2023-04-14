@@ -10,5 +10,5 @@ def solution(x_success: int,
              y_success: int, 
              y_cnt: int) -> bool:
     value = 0.06
-    pval = proportions_ztest([x_success, y_success], [x_cnt, y_cnt]).pvalue
+    stat, pval = proportions_ztest([x_success, y_success], [x_cnt, y_cnt])
     return pval < value
